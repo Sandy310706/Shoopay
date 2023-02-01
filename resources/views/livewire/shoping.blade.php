@@ -38,7 +38,7 @@
                                         <li class="list-group-item text-dark">Rp.7.000 / Buah</li>
                                     </ul>
                                     <div class="card-body">
-                                        <button class="btn btn-danger" wire:click="simpan('Buah Naga', '15000')">BELI</button>
+                                        <button class="btn btn-danger" wire:click="simpan('Buah Naga', '7000')">BELI</button>
                                     </div>
                                 </div>
                             </div>
@@ -52,7 +52,7 @@
                                         <li class="list-group-item text-dark">Rp.10.000 / Buah</li>
                                     </ul>
                                     <div class="card-body">
-                                        <button class="btn btn-danger" wire:click="simpan('Apel', '20000')">BELI</button>
+                                        <button class="btn btn-danger" wire:click="simpan('Apel', '10000')">BELI</button>
                                     </div>
                                 </div>
                             </div>
