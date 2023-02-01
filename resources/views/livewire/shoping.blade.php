@@ -4,10 +4,10 @@
             <div class="col-3">
                 <div class="card text-white mb-3">
                     <div class="card-header bg-secondary">
-                        Keranjang
+                        Total
                     </div>
                     <div class="card-body bg-dark">
-                        
+                        Rp. {{ $jumlah }}
                     </div>
                 </div>
                 <div class="card text-white">
@@ -15,7 +15,9 @@
                         Belanjaan Saya
                     </div>
                     <div class="card-body bg-dark">
-                        
+                        @foreach($datas as $apapun)
+                        <p class="mb-4"> {{ $apapun->nama_barang }} <button class="float-end btn btn-primary mb-1" wire:click="hapus( {{ $apapun->id }} )">Hapus</button></p>
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -33,10 +35,10 @@
                                         <h5 class="card-title text-dark">Buah Naga</h5>
                                     </div>
                                     <ul class="list-group list-group-flush">
-                                        <li class="list-group-item text-dark">Rp.15.000 / Kg</li>
+                                        <li class="list-group-item text-dark">Rp.7.000 / Buah</li>
                                     </ul>
                                     <div class="card-body">
-                                        <button class="btn btn-danger">BELI</button>
+                                        <button class="btn btn-danger" wire:click="simpan('Buah Naga', '15000')">BELI</button>
                                     </div>
                                 </div>
                             </div>
@@ -47,10 +49,10 @@
                                         <h5 class="card-title text-dark">Apel</h5>
                                     </div>
                                     <ul class="list-group list-group-flush">
-                                        <li class="list-group-item text-dark">Rp.20.000 / Kg</li>
+                                        <li class="list-group-item text-dark">Rp.10.000 / Buah</li>
                                     </ul>
                                     <div class="card-body">
-                                        <button class="btn btn-danger">BELI</button>
+                                        <button class="btn btn-danger" wire:click="simpan('Apel', '20000')">BELI</button>
                                     </div>
                                 </div>
                             </div>
@@ -61,10 +63,10 @@
                                         <h5 class="card-title text-dark">Pisang</h5>
                                     </div>
                                     <ul class="list-group list-group-flush">
-                                        <li class="list-group-item text-dark">Rp. 10.000 / Kg</li>
+                                        <li class="list-group-item text-dark">Rp. 10.000 / Sisir</li>
                                     </ul>
                                     <div class="card-body">
-                                        <button class="btn btn-danger">BELI</button>
+                                        <button class="btn btn-danger" wire:click="simpan('Pisang', '10000')">BELI</button>
                                     </div>
                                 </div>
                             </div>
@@ -78,7 +80,7 @@
                                         <li class="list-group-item text-dark">Rp. 5.000 / Buah</li>
                                     </ul>
                                     <div class="card-body">
-                                        <button class="btn btn-danger">BELI</button>
+                                        <button class="btn btn-danger" wire:click="simpan('Nanas', '5000')">BELI</button>
                                     </div>
                                 </div>
                             </div>
